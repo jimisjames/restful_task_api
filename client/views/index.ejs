@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Document</title>
+
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous'> <!-- Bootstrap -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script> <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous'></script> <!-- Bootstrap -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous'></script> <!-- Bootstrap -->
+
+    <link rel='stylesheet' href='css/index.css'> <!-- css -->
+
+    <script> /* JS */
+
+        $(document).ready(function(){
+
+        })
+
+    </script>
+
+</head>
+<body>
+    <h1>Quoting Dojo</h1>
+    <% if(messages.adding) { %>
+        <% for (var x of messages.adding) { %>
+            <h4 class="red"><%= x %></h4>
+        <% } %>
+    <% } %>
+    <form action="/quotes" method="post">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="quote" placeholder="quote">
+        <button>Add to Quotes</button>
+    </form>
+    <a class="btn btn-warning" href="/quotes">View Quotes</a>
+</body>
+</html>
